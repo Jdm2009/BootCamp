@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Text>Module01Challenge</Text>
+		<Description>Some description for BootCamp</Description>
+		<Assembly>BootCamp.dll</Assembly>
+		<FullClassName>BootCamp.Module01Challenge</FullClassName>
+		<ClientId>92ACF624-FEDF-43AE-8CF1-A451A6A10B84</ClientId>
+		<VendorId>J.Mammen Bootcamp</VendorId>
+		<VendorDescription>Lets create</VendorDescription>
+	</AddIn>
+  <AddIn Type="Command">
+    <Text>BootCamp - Command 1</Text>
+    <Description>Some description for BootCamp</Description>
+    <Assembly>BootCamp.dll</Assembly>
+    <FullClassName>BootCamp.Command1</FullClassName>
+    <ClientId>6e6562ec-33ce-4d8a-887b-cf024c65dc8f</ClientId>
+    <VendorId>J.Mammen Bootcamp</VendorId>
+    <VendorDescription>Lets create</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>BootCamp - Command 2</Text>
+    <Description>Some description for BootCamp</Description>
+    <Assembly>BootCamp.dll</Assembly>
+    <FullClassName>BootCamp.Command2</FullClassName>
+    <ClientId>566aac2e-b786-4226-b58f-ee5524980649</ClientId>
+    <VendorId>J.Mammen Bootcamp</VendorId>
+    <VendorDescription>Lets create</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>BootCamp</Name>
+    <Assembly>BootCamp.dll</Assembly>
+    <FullClassName>BootCamp.App</FullClassName>
+    <ClientId>758dbdd2-1763-4642-93ff-fbddcb129a78</ClientId>
+    <VendorId>J.Mammen Bootcamp</VendorId>
+    <VendorDescription>Lets create</VendorDescription>
+  </AddIn>
+</RevitAddIns>
