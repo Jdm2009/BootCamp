@@ -48,20 +48,29 @@ namespace BootCamp
                 }
 
                 List<Level> levelsList = new List <Level>(new FilteredElementCollector(doc).OfClass(typeof(Level)).Cast<Level>().OrderBy(el => el.Elevation));
-
+                //view type
                 FilteredElementCollector floorplanCol = new FilteredElementCollector(doc);
                 floorplanCol.OfClass(typeof(ViewFamilyType));
 
                 ViewFamilyType floorplan = null ;
+                ViewFamilyType ceilingplan = null;
 
-                foreach(ViewFamilyType fp in floorplanCol)
+                foreach (ViewFamilyType fp in floorplanCol)
                 {
-                    if(fp.ViewFamily == ViewFamily.FloorPlan)
-                    { 
+                    if (fp.ViewFamily == ViewFamily.FloorPlan)
+                    {
                         floorplan = fp;
-                        break;
+                    }
+                    if (fp.ViewFamily == ViewFamily.CeilingPlan)
+                    {
+                        ceilingplan = fp;
                     }
                 }
+
+                // titleblock
+                FilteredElementCollector tbColl = new FilteredElementCollector(doc);
+                tbColl.OfCategory(BuiltInCategory.OST_TitleBlocks);
+                ElementId tb = tbColl.FirstElementId();
 
                 foreach(Level l in levelsList)
                 {
@@ -69,7 +78,13 @@ namespace BootCamp
 
                     if(lvlName.Contains("FizzBuzz_"))
                     {
-                        ViewPlan newView = ViewPlan.Create(doc, floorplan.Id, l.Id);
+                        ViewPlan fPlan = ViewPlan.Create(doc, floorplan.Id, l.Id);
+                        ViewPlan cPlan = ViewPlan.Create(doc, ceilingplan.Id, l.Id);
+                        ViewSheet newSht = ViewSheet.Create(doc, tb);
+                        newSht.SheetNumber = lvlName;
+
+                        //place view on sheet
+                        Viewport.Create(doc, newSht.Id, fPlan.Id, new XYZ(0, 0, 0));
                     }
                 }
 
