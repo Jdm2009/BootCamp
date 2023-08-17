@@ -87,7 +87,7 @@ namespace BootCamp
                         Viewport.Create(doc, newSht.Id, fPlan.Id, new XYZ(0, 0, 0));
                     }
                 }
-
+                
                 tx.Commit();
             }
 
