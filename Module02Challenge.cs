@@ -70,6 +70,14 @@ namespace BootCamp
                     Curve curve = curveElement.GeometryCurve;
                     GraphicsStyle graphicStyle = curveElement.LineStyle as GraphicsStyle;
 
+                    //to filter out circles
+                    if (curve.IsBound == false)
+                        continue;
+                    XYZ startPoint = curve.GetEndPoint(0);
+                    XYZ endPoint = curve.GetEndPoint(1);
+                    //can switch out the duct & pipe start & end points with above.
+
+
                     switch (graphicStyle.Name)
                     {
                         case "A-GLAZ":

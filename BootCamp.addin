@@ -18,6 +18,15 @@
 		<VendorId>J.Mammen Bootcamp</VendorId>
 		<VendorDescription>Lets create</VendorDescription>
 	</AddIn>
+	<AddIn Type="Command">
+		<Text>Module03Challenge</Text>
+		<Description>Some description for BootCamp</Description>
+		<Assembly>BootCamp.dll</Assembly>
+		<FullClassName>BootCamp.Module03Challenge</FullClassName>
+		<ClientId>5B8AB656-0A26-4E4F-A092-736BE95F97D3</ClientId>
+		<VendorId>J.Mammen Bootcamp</VendorId>
+		<VendorDescription>Lets create</VendorDescription>
+	</AddIn>
   <AddIn Type="Command">
     <Text>BootCamp - Command 1</Text>
     <Description>Some description for BootCamp</Description>
