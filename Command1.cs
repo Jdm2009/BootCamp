@@ -26,7 +26,7 @@ namespace BootCamp
 
             // Your code goes here
 
-
+            TaskDialog.Show("Create Ribbon", "Button 1");
             return Result.Succeeded;
         }
         internal static PushButtonData GetButtonData()

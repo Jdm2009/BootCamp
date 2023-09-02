@@ -14,7 +14,7 @@ using System.Reflection;
 namespace BootCamp
 {
     [Transaction(TransactionMode.Manual)]
-    public class Command2 : IExternalCommand
+    public class Command7 : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
@@ -25,7 +25,7 @@ namespace BootCamp
             Document doc = uiapp.ActiveUIDocument.Document;
 
             // Your code goes here
-            TaskDialog.Show("Create Ribbon", "Button 2");
+            TaskDialog.Show("Create Ribbon", "Button 7");
 
 
             return Result.Succeeded;
@@ -33,8 +33,8 @@ namespace BootCamp
         internal static PushButtonData GetButtonData()
         {
             // use this method to define the properties for this command in the Revit ribbon
-            string buttonInternalName = "btnCommand2";
-            string buttonTitle = "Button 2";
+            string buttonInternalName = "btnCommand7";
+            string buttonTitle = "Button 7";
 
             ButtonDataClass myButtonData1 = new ButtonDataClass(
                 buttonInternalName,
@@ -42,7 +42,7 @@ namespace BootCamp
                 MethodBase.GetCurrentMethod().DeclaringType?.FullName,
                 Properties.Resources.Blue_32,
                 Properties.Resources.Blue_16,
-                "This is a tooltip for Button 2");
+                "This is a tooltip for Button 7");
 
             return myButtonData1.Data;
         }

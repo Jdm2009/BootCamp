@@ -129,7 +129,11 @@ namespace BootCamp
             foreach (FamilySymbol fs in coll)
             {
                 if (fs.FamilyName == famName && fs.Name == fsName)
+                {
+                    if(fs.IsActive == false)
+                        fs.Activate();
                     return fs;
+                }
             }
             return null;
         }

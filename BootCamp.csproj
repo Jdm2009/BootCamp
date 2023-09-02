@@ -161,6 +161,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Command6.cs" />
+    <Compile Include="Command10.cs" />
+    <Compile Include="Command9.cs" />
+    <Compile Include="Command8.cs" />
+    <Compile Include="Command7.cs" />
+    <Compile Include="Command5.cs" />
+    <Compile Include="Command4.cs" />
+    <Compile Include="Command3.cs" />
     <Compile Include="ExcelExampleCommand.cs" />
     <Compile Include="Module03Challenge.cs" />
     <Compile Include="Module02Challenge.cs" />
